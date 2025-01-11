@@ -15,6 +15,7 @@ kotlinx-datetime = "0.6.0"
 kotlinx-serialization-json = "1.7.3"
 room = "2.7.0-alpha12"
 ktor = "3.0.1"
+koin = "4.1.0-Beta1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
@@ -34,6 +35,11 @@ ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-conte
 ktor-client-serialization = { group = "io.ktor", name = "ktor-client-serialization", version.ref = "ktor" }
 ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+koin-bom = { group = "io.insert-koin", name = "koin-bom", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android" }
+koin-core = { group = "io.insert-koin", name = "koin-core" }
+koin-compose = { group = "io.insert-koin", name = "koin-compose" }
+koin-compose-viewmodel = { group = "io.insert-koin", name = "koin-compose-viewmodel" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -51,4 +57,9 @@ ktor = [
     "ktor-client-serialization",
     "ktor-serialization-kotlinx-json",
     "ktor-client-logging"
+]
+koin = [
+    "koin-core",
+    "koin-compose",
+    "koin-compose-viewmodel"
 ]
