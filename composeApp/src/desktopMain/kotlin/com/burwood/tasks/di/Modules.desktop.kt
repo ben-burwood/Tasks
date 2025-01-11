@@ -21,6 +21,12 @@ actual val httpModule = module {
 }
 
 
+actual val dataStoreModule = module {
+    single<DataStore<Preferences>> {
+        createDataStore()
+    }
+}
+
 
 actual val taskDatabaseModule = module {
     single<TaskDatabase> {

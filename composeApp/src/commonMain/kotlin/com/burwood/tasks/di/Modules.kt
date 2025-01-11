@@ -20,6 +20,7 @@ import org.koin.dsl.module
 
 expect val httpModule: Module
 
+expect val dataStoreModule: Module
 expect val taskDatabaseModule: Module
 
 

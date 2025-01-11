@@ -30,6 +30,11 @@ class TaskRemoteDataSource(
     private val datastore: DataStore<Preferences>
 ) : TaskDataSource {
 
+    init {
+        val accessToken = runBlocking { datastore.getOathToken() } ?: throw UnauthorisedGoogleAPIException()
+        client.configureGoogleAPI(accessToken)
+    }
+
     override suspend fun clear(taskList: TaskList) {
         val url = constructGoogleTasksApiUrl("/lists/${taskList.id}/tasks/clear")
 
